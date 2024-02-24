@@ -1,2 +1,2 @@
-# hello-world
-Just another repository
+# 👋
+collection of personal projects and more
