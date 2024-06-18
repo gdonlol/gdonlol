@@ -4,7 +4,7 @@ const ProjectCard = ({name, desc, link, thumb}: {name: string, desc: string, lin
     <a className='project-card' href={link}>
       <h2>{name}</h2>
       <h3>{desc}</h3>
-      <img src={thumb}/>
+      {thumb && <img src={thumb}/>}
     </a>
   )
 }
