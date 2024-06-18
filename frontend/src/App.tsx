@@ -26,23 +26,72 @@ function App() {
           thumb={"https://media.discordapp.net/attachments/748345145526845522/1252709506090008616/231274324324.png?ex=66733424&is=6671e2a4&hm=238ccc4bd68648d3fe1d465f1cc3b91bb7a16b7e3e07d0f851bfc206d3504bdd&=&format=webp&quality=lossless"}
         />
         <ProjectCard
-          name={'Coursetrack'}
+          name={'W.I.P.'}
           desc={"Coming soon"}
           link={"/"}
           thumb={""}
         />
         <ProjectCard
-          name={'Slerb'}
+          name={'W.I.P.'}
           desc={"Coming soon"}
           link={"/"}
           thumb={""}
         />
         <ProjectCard
-          name={'S.L.'}
+          name={'W.I.P.'}
           desc={"Coming soon"}
           link={"/"}
           thumb={""}
         />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        <ProjectCard
+          name={'W.I.P.'}
+          desc={"Coming soon"}
+          link={"/"}
+          thumb={""}
+        />
+        
         </div>
     </>
   )

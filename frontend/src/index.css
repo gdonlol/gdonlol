@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 400px; }
 
 body {
   margin: 0;
