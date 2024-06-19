@@ -2,8 +2,11 @@ import './App.css'
 import './project-card.css'
 import './ProjectCard'
 import ProjectCard from './ProjectCard'
+import { useState } from 'react'
 
 function App() {
+
+  const [showProjects, setShowProjects] = useState(false)
 
   return (
     <>
@@ -11,13 +14,14 @@ function App() {
         <div className='hero-content'>
           <h1>Gdon.lol</h1>
           <div style={{display: 'flex', gap: 50, justifyContent: 'center'}} className='hero-links'>
-            <a href="#projects">Projects</a>
+            <a href={`#${showProjects ? 'projects' : ''}`} onClick={() => setShowProjects(true)}>Projects</a>
             <a href="https://github.com/gdonlol">Github</a>
             <a href="https://linktr.ee/gdonlol">Linktree</a>
           </div>
         </div>
       </div>
 
+      {showProjects &&
       <div className='projects' id='projects'>
         <ProjectCard
           name={'scoremyrelic.com'}
@@ -91,8 +95,8 @@ function App() {
           link={"/"}
           thumb={""}
         />
-        
         </div>
+        }
     </>
   )
 }

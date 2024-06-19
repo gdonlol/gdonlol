@@ -1,6 +1,5 @@
 .hero{
-  min-height: 300px;
-  height: 100vh;
+  height: 60vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -8,16 +7,21 @@
   align-items: center;
   position: sticky;
   position: -webkit-sticky;
-  top: -42vh;
+  top: -35vh;
   z-index: 999;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 80%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
   pointer-events: none;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 32px;
 }
 
 .hero-content > h1{
   font-family: 'Nocturnal';
   font-size: 64px;
-  margin: 32px 0px 8px 0px;
+  margin: 0px 0px 8px 0px;
 }
 
 .hero-links > a {
@@ -53,7 +57,7 @@
   max-width: 1000px;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 64px;
+  margin: 32px 0px 64px 0px;
 }
 
 @media (min-width: 1100px){
@@ -76,8 +80,8 @@
     align-items: center;
   }
   .hero{
-    height: 150px;
-    top: -100px;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 90%);
+    height: 50vh;
+    top: -225px;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
   }
 }
