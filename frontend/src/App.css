@@ -7,7 +7,7 @@
   align-items: center;
   position: sticky;
   position: -webkit-sticky;
-  top: -35vh;
+  top: calc(-60vh + 160px);
   z-index: 999;
   background: linear-gradient(180deg, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
   pointer-events: none;
