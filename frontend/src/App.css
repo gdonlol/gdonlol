@@ -29,7 +29,7 @@
   color: #a4a4a4;
   position: relative;
   pointer-events: auto;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .hero-links > a::after {
@@ -40,7 +40,7 @@
   width: 0%;
   height: 1px; 
   background-color: #fff; 
-  transition: width 0.3s ease-in-out;
+  transition: width 0.2s ease-in-out;
   transform: translate(-50%, 0);
 }
 
