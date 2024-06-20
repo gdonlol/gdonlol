@@ -1,102 +1,30 @@
 import './App.css'
 import './project-card.css'
-import './ProjectCard'
-import ProjectCard from './ProjectCard'
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
+import { ProjectView } from './ProjectView'
+import { Projects } from './Projects'
+import projectJson from './assets/projects.json'
 
 function App() {
-
-  const [showProjects, setShowProjects] = useState(false)
 
   return (
     <>
       <div className='hero'>
         <div className='hero-content'>
-          <h1>Gdon.lol</h1>
+          <HashLink to={'/'} className='gdonlol'>Gdon.lol</HashLink>
           <div style={{display: 'flex', gap: 50, justifyContent: 'center'}} className='hero-links'>
-            <a href={`#${showProjects ? 'projects' : ''}`} onClick={() => setShowProjects(true)}>Projects</a>
+            <HashLink to={`/projects#list`} >Projects</HashLink>
             <a href="https://github.com/gdonlol">Github</a>
             <a href="https://linktr.ee/gdonlol">Linktree</a>
           </div>
         </div>
       </div>
 
-      {showProjects &&
-      <div className='projects' id='projects'>
-        <ProjectCard
-          name={'scoremyrelic.com'}
-          desc={"Honkai: Star Rail account stats, profiles & relic scorer."}
-          link={"https://www.scoremyrelic.com"}
-          thumb={"https://media.discordapp.net/attachments/748345145526845522/1252709506090008616/231274324324.png?ex=66733424&is=6671e2a4&hm=238ccc4bd68648d3fe1d465f1cc3b91bb7a16b7e3e07d0f851bfc206d3504bdd&=&format=webp&quality=lossless"}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        <ProjectCard
-          name={'W.I.P.'}
-          desc={"Coming soon"}
-          link={"/"}
-          thumb={""}
-        />
-        </div>
-        }
+      <Routes> 
+        <Route path='/projects' element={<Projects projectJson={projectJson} />} />
+        <Route path='/project/:markdown' element={<ProjectView projectJson={projectJson}/>} />
+      </Routes>
     </>
   )
 }

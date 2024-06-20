@@ -14,6 +14,7 @@
 .project-card:hover{
   background-color: #000;
   border: 1px solid #696969;
+  color: white;
 }
 
 .project-card > h2{

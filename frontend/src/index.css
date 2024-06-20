@@ -56,3 +56,11 @@ h1{
   scrollbar-width: thin;
   scrollbar-color: #2B2A33 #000;
 }
+
+a {
+  color:rgb(187, 69, 214)
+}
+
+a:hover {
+  color:rgb(211, 101, 235)
+}
