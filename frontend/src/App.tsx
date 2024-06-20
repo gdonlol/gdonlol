@@ -24,6 +24,7 @@ function App() {
       <Routes> 
         <Route path='/projects' element={<Projects projectJson={projectJson} />} />
         <Route path='/project/:markdown' element={<ProjectView projectJson={projectJson}/>} />
+        <Route path='/*' element={<div>404.</div>} />
       </Routes>
     </>
   )
