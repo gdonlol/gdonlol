@@ -22,9 +22,10 @@ function App() {
       </div>
 
       <Routes> 
+        <Route path='/' element={<div></div>} />
         <Route path='/projects' element={<Projects projectJson={projectJson} />} />
         <Route path='/project/:markdown' element={<ProjectView projectJson={projectJson}/>} />
-        <Route path='/*' element={<div></div>} />
+        <Route path='/*' element={<div>404.</div>} />
       </Routes>
     </>
   )
