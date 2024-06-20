@@ -13,8 +13,8 @@ export const ProjectView = ({projectJson}: {projectJson:any}) => {
   useEffect(() => {
     const getMdData = async () => {
       const response = await fetch(`/md/${markdown}.txt`)
-      console.log(response.headers.get("content-type"))
-      if (response.headers.get("content-type") === 'text/plain'){
+      const missingCheck = response.headers.get("content-type") || ''
+      if (missingCheck.includes('text/plain')){
         setMdString(await response.text())
       }
     }
