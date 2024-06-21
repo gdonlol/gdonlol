@@ -1,11 +1,13 @@
-### Main Features:
-- View public stats of any Honkai Star Rail player's account with UID
-- Score relic (in game items) strength value (formula can be found here: [https://www.scoremyrelic.com/relic-scorer](https://www.scoremyrelic.com/relic-scorer))
-- Individual profile pages
-- Player search
+### Project Overview
 
-### Other Features:
-- Manual input relic scorer
-- Character stat roll distributions
-- Character endgame performance analysis
-- Browse Honkai Star Rail's current meta
+#### Main Features:
+- **View Public Stats:** Access comprehensive statistics of any Honkai Star Rail player's account using their UID.
+- **Relic Strength Scoring:** Evaluate the strength of in-game items using our scoring formula. Learn more about the formula [here](https://www.scoremyrelic.com/relic-scorer).
+- **Individual Profile Pages:** Get detailed and personalized profile pages for each player.
+- **Player Search:** Easily search for players by their UID.
+
+#### Other Features:
+- **Manual Input Relic Scorer:** Score relics manually to determine their value.
+- **Character Stat Roll Distributions:** Analyze the distribution of stat rolls for different characters.
+- **Character Endgame Performance Analysis:** Assess character performance in endgame scenarios.
+- **Meta Browsing:** Stay updated with the current meta in Honkai Star Rail.
