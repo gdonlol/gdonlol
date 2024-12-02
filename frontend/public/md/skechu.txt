@@ -1,19 +1,34 @@
 The Team: Gordon Xu, Ian Tan, Basil Liu
 
-We believe that consistency is key when learning any skill. But, this is especially true for art. Our teammate Gordon learned that the hard way (he's getting cooked in Studio Arts 1601). Like many others, he finds practicing fundamentals boring and tedious. Skechu solves this by making practicing more convenient and gamifying the process to prevent burnout. By making the act of practicing art addicting Skechu empowers you to get your grind on.
-How it Works
+This is a submission for Hackwestern 11, a 36 hour long hackathon!
+
+### Intro
+
+Consistency is the cornerstone of mastering any skill, especially art. Yet, the road to improvement often leads to burnout and dwindling motivation. Skechu changes this narrative by transforming art practice into a convenient, gamified experience.  With instant gratification and engaging rewards, Skechu makes practicing art addictive—in the best way. Our platform empowers artists to embrace the grind, stay motivated, and see real progress, all while having fun.
+### How it Works
 
 When you open Skechu you are greeted with a few categories to choose from, including a still-life, face, and figure reference photo. Once you select your category you are then prompted to choose a style, such as realistic or anime. After you've selected your category and style, you can then hit "start" and Skechu will generate a new reference photo for you to practice on. Now, it's up to you to sketch this reference as faithfully as you can and upload it once you're done. Skechu will then compare the two images, grade you on your accuracy, and reward you with the appropriate points that go toward your level. Additionally, to encourage consistency, Skechu tracks daily streaks and awards you for your diligence. All of this comes together to create a genuinely fun and competitive experience that keeps you coming back for more, allowing you to grow your art skills in the process. With the rise of AI, we believe that Skechu is a step in the right direction, as a system that supports artists' efforts rather than replacing them.
 
-AI Backend
+### AI Backend
 
 Arguably the biggest challenge of this project was the AI portion. We were working with a budget of $0, so we were not really willing to try using services like Midjourney, DALLE, or Imagen. We had to get a little resourceful and decided we would work with open-source models. Unfortunately, the best hardware we could muster was a GPU with 8GB of VRAM, and so larger, more competent, models like Flux were off the table. Ultimately, we were constrained to Stable Diffusion 1.5-based models, but that was enough. We gathered a few checkpoints from civit.ai and configured a ComfyUI installation for inferencing. Using ComfyUI we designed a basic workflow and learned how to translate it into Python code for our backend. Using this we created a module for our custom generator object which could control most of the useful settings for our purposes, and easily swap checkpoints. From here we needed a way to get our web app to use the image generator. From a development standpoint, we preferred to be able to work on our React backend on our machines, and merging Python code with Javascript seemed messy, so we decided the cleanest approach was to setup two servers, one which handled the web app, and the other which handled the AI operations. When a user requests a new image be generated, the React backend would send a request to our AI web server, for a specific type of image generation and our server would then respond with the appropriate images in base64 in a JSON. This took us a while to figure out as none of us had much experience with this kind of stuff. Ultimately, since we were beginners we decided to learn flask to make the AI server.
-AI Art Grading
+
+### AI Art Grading
 
 The other critical function of our AI backend was the image grading/scoring system. At the start, we considered many approaches to grading the accuracy of a sketch, many of which used the line art of the AI image. For that reason, before we even decided on our scoring algorithm, we already implemented lineart detection into our image generation workflow. We took advantage of Controlnet preprocessors to generate our lineart. For those who are not familiar, Controlnet allows you to guide the generation of an image in Stable Diffusion using things such as depth maps, poses, and lineart. In order to accomplish this Controlnet has a tiny model used to convert an image into a line art image (with inverted colors), it is this model which we took advantage of. The issue now though was scoring the similarity between two images which were (in practice) both sketches. We originally just wanted to take the pixel difference of the two images, but recognized this was a naive approach that would fall apart if lines were even a pixel off. To remedy this shortcoming we thought to try iteratively applying a maxpool filter to the image, and then each iteration comparing the two images. As the two images pixelated, the small pixel differences caused by reasonable human error would become more negligible. However, this still didn't capture all the patterns involved in the comparison. To tackle that we settled on two ideas after a lot of research. One was to vector embed the images and use those vectors to quantify their similarity using the latent space. The other method was to compare feature maps. For the embedding solution, we tried using RWKV-CLIP which had an image encoder head inspired by ViT. This head produced a vector embedding for the image which we planning to hack out of an implementation online and modify for our purposes. However, we ultimately decided against this approach because most of the spatial information was lost, and we figured all the information in the final embedding was too abstract for our use case. In the end, we found a model trained on Imagenet, and injected code into our Pytorch installation to make the model return all of its feature maps during inference. We then used these feature maps to compare the differences between two images and averaged these differences to assign a sort of loss value which we could then use to calculate grades and points. We noticed through experimentation that the feature maps for the reference and sketch were very similar as we hypothesized.
 
+![](../images/193826f6701c0649d2bdb354957af870.png)
+
 When we subtracted the feature maps to get the difference maps, we found that the accuracy of sketches was often clearly visible.
+
+![](../images/193826ff91384423fc97ef646fe97c2e.png)
 
 We then added all of the difference maps together to create an issue map for a sketch that highlights parts which were most problematic.
 
+![](../images/1938270646d145c08133a4746e6882fb.png)
+
 We then conducted more experiments, sketching our images at various qualities, and found that our score was a generally reasonable measure of loss (the higher the loss score, the worse the quality). 
+
+![](../images/1938270ef5bd49c3d4cfd9b4819bb4dd.png)
+
+Post written by Ian Tan

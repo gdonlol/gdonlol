@@ -10,6 +10,7 @@ export const ProjectView = ({projectJson}: {projectJson:any}) => {
     return curr.markdown === markdown
   })
 
+  
   useEffect(() => {
     const getMdData = async () => {
       const response = await fetch(`/md/${markdown}.txt`)
@@ -35,7 +36,8 @@ export const ProjectView = ({projectJson}: {projectJson:any}) => {
       }
       {mdString && <div style={{maxWidth: '853px', padding: '16px 16px 64px 16px'}}>
         {projectObj.link !== '' && <p>Check it out here: <a href={projectObj.link}>{projectObj.link}</a></p>}
-        <Markdown>{mdString}</Markdown>
+        <Markdown components={{img:({node,...props})=><img style={{maxWidth:'100%'}}{...props}/>}}
+        >{mdString}</Markdown>
       </div>}
     </div>
   )
