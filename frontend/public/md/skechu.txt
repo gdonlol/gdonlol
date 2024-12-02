@@ -1,6 +1,6 @@
 The Team: Gordon Xu, Ian Tan, Basil Liu
 
-This is a submission for Hackwestern 11, a 36 hour long hackathon!
+This is our submission for Hackwestern 11, a 36 hour long hackathon.
 
 ### Intro
 
