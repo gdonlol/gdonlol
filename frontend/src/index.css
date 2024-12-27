@@ -9,7 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 250px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 250px;
+}
 
 body {
   margin: 0;
@@ -36,7 +39,7 @@ body {
   src: url('assets/fonts/Geist-Bold.otf') format('opentype');
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
@@ -44,13 +47,16 @@ h1{
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #000;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #2B2A33;
   border-radius: 5px;
 }
+
 /* firefox */
 * {
   scrollbar-width: thin;
@@ -58,9 +64,9 @@ h1{
 }
 
 a {
-  color:rgb(187, 69, 214)
+  color: rgb(187, 69, 214)
 }
 
 a:hover {
-  color:rgb(211, 101, 235)
+  color: rgb(211, 101, 235)
 }

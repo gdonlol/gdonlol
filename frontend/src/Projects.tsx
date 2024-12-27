@@ -1,15 +1,16 @@
 import ProjectCard from './ProjectCard'
 
-export const Projects = ({projectJson}: {projectJson:any}) => {
+export const Projects = ({ projectJson }: { projectJson: any }) => {
 
   const renderProjects = projectJson.map((curr: any, index: number) => {
-    return(
+    return (
       <ProjectCard
         name={curr.name}
         desc={curr.desc}
         markdown={curr.markdown}
         thumb={curr.thumb}
         key={index}
+        link={curr.link}
       />
     )
   })
