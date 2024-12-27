@@ -7,7 +7,7 @@ const ProjectCard = ({ link, name, desc, thumb, markdown }: { link: string, name
       <h3 style={{ width: "100%" }}>{desc}</h3>
       {thumb && <img src={thumb} />}
       <HashLink className="project-details" to={`/project/${markdown}#md`} >
-        <span>README.</span>
+        <span>README.md</span>
       </HashLink>
     </a>
   )
