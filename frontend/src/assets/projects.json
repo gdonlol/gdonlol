@@ -1,98 +1,98 @@
 [
-  {
-    "name": "scoremyrelic.com",
-    "desc": "Honkai: Star Rail account stats, profiles & relic scorer.",
-    "thumb": "https://gdonlol.s3.us-east-2.amazonaws.com/public/scoremyrelic-thumb.png",
-    "link": "https://www.scoremyrelic.com",
-    "demovid": "https://www.youtube.com/embed/duuuWBdw4KQ",
-    "markdown": "scoremyrelic"
-  },
-  {
-    "name": "Workday Simulator",
-    "desc": "How fast are you at filling out job applications?",
-    "thumb": "/thumb/workday.png",
-    "link": "https://workday.gdon.lol",
-    "demovid": "https://youtube.com/embed/leSiFVPPVhE",
-    "markdown": "workday"
-  },
-  {
-    "name": "Skechu",
-    "desc": "Making grinding art fun.",
-    "thumb": "/thumb/skechu.png",
-    "link": "https://github.com/gdonlol/hackwestern11",
-    "demovid": "https://youtube.com/embed/cuSfnEkfzgE",
-    "markdown": "skechu"
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  },
-  {
-    "name": "W.I.P.",
-    "desc": "Coming soon.",
-    "thumb": "",
-    "link": "",
-    "demovid": "",
-    "markdown": ""
-  }
+    {
+        "name": "scoremyrelic.com",
+        "desc": "Honkai: Star Rail player account profiles database.",
+        "thumb": "https://gdonlol.s3.us-east-2.amazonaws.com/public/scoremyrelic-thumb.png",
+        "link": "https://www.scoremyrelic.com",
+        "demovid": "https://www.youtube.com/embed/duuuWBdw4KQ",
+        "markdown": "scoremyrelic"
+    },
+    {
+        "name": "Neonote",
+        "desc": "Terminal based productivity tool.",
+        "thumb": "/thumb/neonote.png",
+        "link": "https://github.com/gdonlol/neonote",
+        "demovid": "",
+        "markdown": "neonote"
+    },
+    {
+        "name": "Workday Simulator",
+        "desc": "How fast are you at filling out job applications?",
+        "thumb": "/thumb/workday.png",
+        "link": "https://workday.gdon.lol",
+        "demovid": "https://youtube.com/embed/leSiFVPPVhE",
+        "markdown": "workday"
+    },
+    {
+        "name": "Skechu",
+        "desc": "Art trainer tool.",
+        "thumb": "/thumb/skechu.png",
+        "link": "https://github.com/gdonlol/hackwestern11",
+        "demovid": "https://youtube.com/embed/cuSfnEkfzgE",
+        "markdown": "skechu"
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    },
+    {
+        "name": "W.I.P.",
+        "desc": "Coming soon.",
+        "thumb": "",
+        "link": "",
+        "demovid": "",
+        "markdown": ""
+    }
 ]
